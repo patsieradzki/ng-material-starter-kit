@@ -12,7 +12,7 @@ import { LoginService } from '../../services/login.service';
 export class LoginFormComponent {
   readonly login: FormGroup = new FormGroup({
     username: new FormControl(),
-    password: new FormControl()
+    password: new FormControl(),
   });
 
   constructor(private _loginService: LoginService) {
