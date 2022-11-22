@@ -4,6 +4,7 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProductCategoriesComponent } from './components/product-categories/product-categories.component';
 import { CryptoComponent } from './components/crypto/crypto.component';
 import { HolidayComponent } from './components/holiday/holiday.component';
+import { CheckboxCategoriesComponent } from './components/checkbox-categories/checkbox-categories.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { ProductCategoriesComponentModule } from './components/product-categories/product-categories.component-module';
@@ -12,9 +13,10 @@ import { CryptoComponentModule } from './components/crypto/crypto.component-modu
 import { CryptoServiceModule } from './services/crypto.service-module';
 import { HolidayComponentModule } from './components/holiday/holiday.component-module';
 import { HolidayServiceModule } from './services/holiday.service-module';
+import { CheckboxCategoriesComponentModule } from './components/checkbox-categories/checkbox-categories.component-module';
 
 @NgModule({
-  imports: [RouterModule.forRoot([{ path: 'products', component: ProductListComponent }, { path: 'categories', component: ProductCategoriesComponent }, { path: 'crypto', component: CryptoComponent }, { path: 'holidays', component: HolidayComponent }]), ProductListComponentModule, ProductsServiceModule, ProductCategoriesComponentModule, CategoriesServiceModule, CryptoComponentModule, CryptoServiceModule, HolidayComponentModule, HolidayServiceModule],
+  imports: [RouterModule.forRoot([{ path: 'products', component: ProductListComponent }, { path: 'categories', component: ProductCategoriesComponent }, { path: 'crypto', component: CryptoComponent }, { path: 'holidays', component: HolidayComponent }, { path: 'checkbox', component: CheckboxCategoriesComponent }]), ProductListComponentModule, ProductsServiceModule, ProductCategoriesComponentModule, CategoriesServiceModule, CryptoComponentModule, CryptoServiceModule, HolidayComponentModule, HolidayServiceModule, CheckboxCategoriesComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
