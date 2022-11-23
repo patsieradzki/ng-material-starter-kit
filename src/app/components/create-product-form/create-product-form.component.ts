@@ -1,6 +1,10 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
+import { CategoriesModel } from '../../models/categories.model';
 import { CreateproductService } from '../../services/createproduct.service';
+import { CategoriesService } from '../../services/categories.service';
 
 @Component({
   selector: 'app-create-product-form',
@@ -17,8 +21,9 @@ export class CreateProductFormComponent {
     category: new FormControl(),
     image: new FormControl()
   });
+  readonly categories$: Observable<CategoriesModel[]> = this._categoriesService.getAll().pipe(switchMap(data => this._categoriesService.getAll()));
 
-  constructor(private _createproductService: CreateproductService) {
+  constructor(private _createproductService: CreateproductService, private _categoriesService: CategoriesService) {
   }
 
   onCreateproductformSubmitted(createproductform: FormGroup): void {
