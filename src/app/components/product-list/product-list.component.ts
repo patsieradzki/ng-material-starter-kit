@@ -12,7 +12,6 @@ import { ProductsService } from '../../services/products.service';
 })
 export class ProductListComponent {
   readonly list$: Observable<ProductModel[]> = this._productsService.getAll();
-
   constructor(private _productsService: ProductsService) {
   }
 }

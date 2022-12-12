@@ -10,6 +10,8 @@ import { CreateProductFormComponent } from './components/create-product-form/cre
 import { CreateemployeeComponent } from './components/createemployee/createemployee.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { RegisterformComponent } from './components/registerform/registerform.component';
+import { CatComponent } from './components/cat/cat.component';
+import { AgeComponent } from './components/age/age.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { ProductCategoriesComponentModule } from './components/product-categories/product-categories.component-module';
@@ -28,9 +30,24 @@ import { LoginFormComponentModule } from './components/login-form/login-form.com
 import { LoginServiceModule } from './services/login.service-module';
 import { RegisterformComponentModule } from './components/registerform/registerform.component-module';
 import { RegisterformServiceModule } from './services/registerform.service-module';
+import { CatComponentModule } from './components/cat/cat.component-module';
+import { CatServiceModule } from './services/cat.service-module';
+import { AgeComponentModule } from './components/age/age.component-module';
 
 @NgModule({
-  imports: [RouterModule.forRoot([{ path: 'products', component: ProductListComponent }, { path: 'categories', component: ProductCategoriesComponent }, { path: 'crypto', component: CryptoComponent }, { path: 'holidays', component: HolidayComponent }, { path: 'checkbox', component: CheckboxCategoriesComponent }, { path: 'categoriesmenu', component: CategoriesMenuComponent }, { path: 'createproduct', component: CreateProductFormComponent }, { path: 'createemployee', component: CreateemployeeComponent }, { path: 'login', component: LoginFormComponent }, { path: 'registerform', component: RegisterformComponent }]), ProductListComponentModule, ProductsServiceModule, ProductCategoriesComponentModule, CategoriesServiceModule, CryptoComponentModule, CryptoServiceModule, HolidayComponentModule, HolidayServiceModule, CheckboxCategoriesComponentModule, CategoriesMenuComponentModule, CreateProductFormComponentModule, CreateproductServiceModule, CreateemployeeComponentModule, CreateemplooyeServiceModule, LoginFormComponentModule, LoginServiceModule, RegisterformComponentModule, RegisterformServiceModule],
+  imports: [RouterModule.forRoot([
+    { path: 'products', component: ProductListComponent },
+    { path: 'categories', component: ProductCategoriesComponent },
+    { path: 'crypto', component: CryptoComponent },
+    { path: 'holidays', component: HolidayComponent },
+    { path: 'checkbox', component: CheckboxCategoriesComponent },
+    { path: 'categoriesmenu', component: CategoriesMenuComponent },
+    { path: 'createproduct', component: CreateProductFormComponent },
+    { path: 'createemployee', component: CreateemployeeComponent },
+    { path: 'login', component: LoginFormComponent },
+    { path: 'registerform', component: RegisterformComponent },
+    { path: 'facts', component: CatComponent },
+    { path: 'age', component: AgeComponent }]), ProductListComponentModule, ProductsServiceModule, ProductCategoriesComponentModule, CategoriesServiceModule, CryptoComponentModule, CryptoServiceModule, HolidayComponentModule, HolidayServiceModule, CheckboxCategoriesComponentModule, CategoriesMenuComponentModule, CreateProductFormComponentModule, CreateproductServiceModule, CreateemployeeComponentModule, CreateemplooyeServiceModule, LoginFormComponentModule, LoginServiceModule, RegisterformComponentModule, RegisterformServiceModule, CatComponentModule, CatServiceModule, AgeComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
